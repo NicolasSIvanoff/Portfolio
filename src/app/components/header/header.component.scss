@@ -1,0 +1,55 @@
+.base {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100vw;
+  height: 8vh;
+  background-color: #695b5b;
+}
+
+.container-header {
+  display: flex;
+  width: 40vw;
+  justify-content: flex-end;
+}
+
+span {
+  color: white;
+  cursor: pointer;
+  font-size: 18px
+}
+
+.mat-menu-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.desktop-layout {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .mat-menu-button {
+    display: block;
+  }
+}
+
+mat-icon {
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop-layout {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-layout {
+    display: none;
+  }
+}

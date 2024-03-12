@@ -1,0 +1,21 @@
+<div class="base">
+  <div class="container-header">
+    <div class="mobile-layout">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon color="basic">menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Início</button>
+      <button mat-menu-item>Sobre mim</button>
+      <button mat-menu-item>Projetos</button>
+      <button mat-menu-item>Habilidades</button>
+    </mat-menu>
+    </div>
+    <div class="desktop-layout">
+      <span>Início</span>
+      <span>Sobre mim</span>
+      <span>Projetos</span>
+      <span>Habilidades</span>
+    </div>
+  </div>
+</div>
