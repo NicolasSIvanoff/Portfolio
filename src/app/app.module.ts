@@ -9,11 +9,17 @@ import { MatButtonModule} from "@angular/material/button";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatIconModule } from "@angular/material/icon";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { InitialComponent } from './components/initial/initial.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    MainPageComponent,
+    InitialComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,
