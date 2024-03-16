@@ -10,6 +10,7 @@
 .container-header {
   display: flex;
   width: 50vw;
+  padding-right: 3vw;
   justify-content: flex-end;
 }
 
@@ -42,13 +43,24 @@ mat-icon {
   cursor: pointer;
 }
 
+.fa-solid {
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (max-width: 768px) {
   .desktop-layout {
     display: none;
   }
+  .container-header {
+    padding-right: 0;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .mobile-layout {
     display: none;
   }
