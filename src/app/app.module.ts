@@ -12,6 +12,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { InitialComponent } from './components/initial/initial.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     MatMenuModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    FontAwesomeModule
   ],
   providers: [
     provideAnimationsAsync()
