@@ -1,6 +1,6 @@
-.container-initial {
-  background: url(/assets/images/background-light.jpg);
-  //background: url(/assets/images/background-dark.jpg);
+#container-initial {
+  //background: url(/assets/images/background-light.jpg);
+  background: url(/assets/images/background-dark.jpg);
   background-size: cover;
   position: relative;
   width: 100vw;
@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 60vh;
+  height: 70vh;
 }
 
 .text-design {
@@ -99,6 +99,10 @@ p {
   p {
     font-size: 15px;
   }
+  .contacts {
+    width: 90vw !important;
+    gap: 5vw;
+  }
 }
 
 .container-image {
@@ -157,8 +161,73 @@ img {
   }
 }
 
+.contacts {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 3vh;
+}
+
+a {
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  box-shadow: white 0 0 5px 0;
+  font-size: 20px;
+}
+
+.name-web {
+  display: none;
+  font-size: 14px;
+  padding: 0 5px;
+}
+
+a:hover {
+  animation: new-format .5s forwards;
+
+  i {
+    display: none;
+  }
+}
+
+a:hover .name-web {
+  display: block;
+}
+
+
+@keyframes new-format {
+  to {
+    scale: 1.4;
+    border-radius: 0;
+    width: auto;
+    height: 30px;
+  }
+}
+
 @media (min-width: 1920px) {
   img {
     right: 4vw;
   }
+}
+
+.linkedin {
+  background-color: #0077b5 !important;
+}
+
+.github {
+  background-color: #333 !important;
+}
+
+.whats {
+  background-color: #25D366 !important;
+}
+
+.gmail {
+  background-color: #D44638 !important;
 }

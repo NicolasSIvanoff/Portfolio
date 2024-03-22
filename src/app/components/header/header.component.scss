@@ -2,9 +2,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 100vw;
+  width: calc(100% - 10px);
   height: 8vh;
+  position: fixed;
+  z-index: 9;
   background-color: #15191c;
+  box-shadow: white 0 0 5px 0;
 }
 
 .container-header {
@@ -14,10 +17,16 @@
   justify-content: flex-end;
 }
 
-span {
+button {
   color: white;
   cursor: pointer;
-  font-size: 18px
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+}
+
+header a:hover {
+  scroll-behavior: smooth;
 }
 
 .mat-menu-button {
@@ -57,6 +66,9 @@ mat-icon {
   }
   .container-header {
     padding-right: 0;
+  }
+  .base{
+    width: calc(100% - 3px);
   }
 }
 

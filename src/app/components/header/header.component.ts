@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef} from '@angular/core';
+import {ScrollService} from "../shared/scroll.service";
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  public isMenuOpen = false;
+
+  constructor(private serviceScroll: ScrollService ){}
+
+  public navigateTo(id: string) {
+    this.serviceScroll.changeSectionId(id);
+  }
 }

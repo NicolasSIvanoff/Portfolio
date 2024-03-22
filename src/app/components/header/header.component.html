@@ -5,18 +5,18 @@
       <mat-icon color="basic">menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Início</button>
-      <button mat-menu-item>Sobre mim</button>
-      <button mat-menu-item>Projetos</button>
-      <button mat-menu-item>Habilidades</button>
+      <button mat-menu-item (click)="navigateTo('container-initial')" > Início</button>
+      <button mat-menu-item (click)="navigateTo('container-about')" >Sobre mim</button>
+      <button mat-menu-item (click)="navigateTo('container-projects')" >Projetos</button>
+      <button mat-menu-item (click)="navigateTo('container-skills')" >Habilidades</button>
     </mat-menu>
     </div>
     <div class="desktop-layout">
-      <span>Início</span>
-      <span>Sobre mim</span>
-      <span>Projetos</span>
-      <span>Habilidades</span>
-      <i class="fa-solid fa-moon"></i>
+      <button (click)="navigateTo('container-initial')">Início</button>
+      <button (click)="navigateTo('container-about')">Sobre mim</button>
+      <button (click)="navigateTo('container-projects')">Projetos</button>
+      <button (click)="navigateTo('container-skills')">Habilidades</button>
+      <button class="fa-solid fa-moon"></button>
       <i class="fa-solid fa-sun"></i>
       <fa-icon></fa-icon>
     </div>

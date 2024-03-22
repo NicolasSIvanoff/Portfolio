@@ -17,6 +17,12 @@ section {
   clip-path: polygon(0% 60%, 0% 100%, 110% 100%);
 }
 
+.invert {
+  clip-path: polygon(0% 0%, 100% 0%, 129% 100%);
+  bottom: -149px;
+  z-index: 1;
+}
+
 .section-divider {
   width: 100%;
   position: relative;

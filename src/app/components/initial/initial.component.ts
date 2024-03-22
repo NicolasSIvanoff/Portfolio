@@ -1,10 +1,24 @@
-import { Component } from '@angular/core';
+import {ChangeDetectorRef, Component, ElementRef, OnInit} from '@angular/core';
+import {ScrollService} from "../shared/scroll.service";
 
 @Component({
   selector: 'app-initial',
   templateUrl: './initial.component.html',
   styleUrl: './initial.component.scss'
 })
-export class InitialComponent {
+export class InitialComponent implements OnInit{
 
+    constructor( private serviceScroll: ScrollService, private elementRef: ElementRef, private readonly cdr: ChangeDetectorRef ) {
+    }
+
+    ngOnInit() {
+      this.serviceScroll.currentSectionId.subscribe((id: string) =>{
+        if(id) {
+          const element = this.elementRef.nativeElement.querySelector(`#${id}`);
+          if(element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      })
+    }
 }

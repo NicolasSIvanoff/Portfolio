@@ -13,6 +13,8 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { InitialComponent } from './components/initial/initial.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import { ProjectsComponent } from './components/projects/projects.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
     HeaderComponent,
     MainPageComponent,
     InitialComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ProjectsComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
