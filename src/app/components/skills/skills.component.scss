@@ -1,0 +1,45 @@
+#container-skills {
+    //background: url(/assets/images/background-light.jpg);
+    background: url(/assets/images/background-dark.jpg);
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 80vw;
+  overflow: hidden;
+}
+
+.skills-title {
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  margin: 30px;
+  animation: scroll 10s linear infinite;
+}
+
+.carrossel {
+  width: 3360px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  100% { transform: translate(-1120px); }
+}

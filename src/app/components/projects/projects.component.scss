@@ -1,0 +1,82 @@
+#container-projects {
+  background-color: #15191c;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: opacity-section 3s cubic-bezier(.39,.575,.565,1) both;
+  animation-delay: inherit;
+}
+
+.in-view {
+  animation: aparecer 3s cubic-bezier(.215,.61,.355,1) both;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    letter-spacing: 1em;}
+  100% {
+    opacity: 1;
+    visibility: visible;
+    letter-spacing: normal;
+  }
+  }
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  height: 50%;
+  background-color: #121212;
+}
+
+.project-bus {
+  width: 47%;
+  height: 90%;
+  background: url(/assets/images/bus-poa.png);
+  background-size: cover;
+  transition: transform 0.5s ease-in-out;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.project-rick {
+  width: 47%;
+  height: 90%;
+  background: url(/assets/images/rick-and-morty.png);
+  background-size: cover;
+  transition: transform 0.5s ease-in-out;
+  border: 1px solid #ccc;
+  cursor: pointer;
+
+}
+
+.project-bus:hover, .project-rick:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.projects-title {
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+    height: 90%;
+  }
+
+  .project-bus, .project-rick {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
