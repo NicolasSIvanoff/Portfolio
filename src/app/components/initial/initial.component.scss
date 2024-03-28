@@ -18,16 +18,10 @@
 }
 
 .text-design {
-  text-align: left;
+  text-align: -webkit-center;
   width: 47vw;
   background-color: rgba(18, 18, 18, 0.39);
-  animation: text-center 8s forwards;
   animation-delay: 5.3s;
-}
-
-@keyframes text-center {
-  from { text-align: left; }
-  to { text-align: -webkit-center; }
 }
 
 p {
@@ -67,7 +61,7 @@ p {
   }
   to {
     width: 32ch;
-    border-right: 4px solid white;
+    border-right: transparent
   }
 }
 
