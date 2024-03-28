@@ -1,0 +1,25 @@
+<div class="base">
+  <div class="container-header">
+    <div class="mobile-layout">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon color="basic">menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="navigateTo('container-initial')" > Início</button>
+      <button mat-menu-item (click)="navigateTo('container-about')" >Sobre mim</button>
+      <button mat-menu-item (click)="navigateTo('container-skills')" >Habilidades</button>
+      <button mat-menu-item (click)="navigateTo('container-projects')" >Projetos</button>
+      <button mat-menu-item [class.hidden]="currentTheme === 'dark'" (click)="defineTheme('dark')"> tema escuro </button>
+      <button mat-menu-item [class.hidden]="currentTheme === 'light'" (click)="defineTheme('light')"> tema claro </button>
+    </mat-menu>
+    </div>
+    <div class="desktop-layout">
+      <button (click)="navigateTo('container-initial')">Início</button>
+      <button (click)="navigateTo('container-about')">Sobre mim</button>
+      <button (click)="navigateTo('container-skills')">Habilidades</button>
+      <button (click)="navigateTo('container-projects')">Projetos</button>
+      <button class="fa-solid fa-moon" [class.disabled]="currentTheme === 'dark'" (click)="defineTheme('dark')"></button>
+      <button class="fa-solid fa-sun sun" [class.disabled]="currentTheme === 'light'" (click)="defineTheme('light')"></button>
+    </div>
+  </div>
+</div>
