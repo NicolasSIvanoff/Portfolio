@@ -2,12 +2,29 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: calc(100% - 10px);
+  width: 100vw;
   height: 8vh;
   position: fixed;
   z-index: 9;
-  background-color: #15191c;
-  box-shadow: white 0 0 5px 0;
+  background-color: var(--header-color);
+  box-shadow: var(--shadow-color) 0 0 8px 0;
+}
+
+.disabled {
+  pointer-events: none;
+  background-color: #544f4f;
+  height: 28px;
+  width: 27.5px;
+  justify-content: center;
+  border: 0.5px solid white;
+}
+
+.sun {
+  color: white !important;
+}
+
+.hidden {
+  display: none;
 }
 
 .container-header {
@@ -18,7 +35,7 @@
 }
 
 button {
-  color: white;
+  color: var(--text-color);
   cursor: pointer;
   font-size: 18px;
   border: none;
@@ -48,16 +65,19 @@ header a:hover {
 }
 
 mat-icon {
-  color: white;
+  color: var(--text-color);
   cursor: pointer;
 }
 
 .fa-solid {
-  color: white;
+  color: var(--text-color);
   cursor: pointer;
   font-size: 16px;
   display: flex;
   align-items: center;
+  height: 8vh;
+  width: 4vw;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -69,6 +89,9 @@ mat-icon {
   }
   .base{
     width: calc(100% - 3px);
+  }
+  button {
+    color:black;
   }
 }
 

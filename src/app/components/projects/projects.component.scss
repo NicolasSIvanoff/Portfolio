@@ -1,5 +1,5 @@
 #container-projects {
-  background-color: #15191c;
+  background-color: var(--bkg-color);
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -12,19 +12,20 @@
 }
 
 .in-view {
-  animation: aparecer 3s cubic-bezier(.215,.61,.355,1) both;
+  animation: view-text 3s cubic-bezier(.215,.61,.355,1) both;
 }
 
-@keyframes aparecer {
+@keyframes view-text {
   0% {
     opacity: 0;
     visibility: hidden;
-    letter-spacing: 1em;}
+    letter-spacing: 1em;
+    }
   100% {
     opacity: 1;
     visibility: visible;
     letter-spacing: normal;
-  }
+    }
   }
 
 .projects {
@@ -55,7 +56,6 @@
   transition: transform 0.5s ease-in-out;
   border: 1px solid #ccc;
   cursor: pointer;
-
 }
 
 .project-bus:hover, .project-rick:hover {
@@ -64,12 +64,17 @@
 }
 
 .projects-title {
-  color: white;
+  color: var(--text-color);
   font-size: 2.5em;
   margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
+
+  .projects-title {
+    font-size: 1.3em;
+  }
+
   .projects {
     flex-direction: column;
     height: 90%;

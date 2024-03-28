@@ -1,6 +1,5 @@
 #container-skills {
-    //background: url(/assets/images/background-light.jpg);
-    background: url(/assets/images/background-dark.jpg);
+    background: var(--background-image);
     background-size: cover;
     position: relative;
     width: 100vw;
@@ -22,9 +21,10 @@
 }
 
 .skills-title {
-  color: white;
+  color: var(--text-color);
   font-size: 2.5em;
   margin-bottom: 20px;
+  opacity: 0;
 }
 
 img {

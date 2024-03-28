@@ -15,6 +15,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import { ProjectsComponent } from './components/projects/projects.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import {AnimationDirective} from "./components/shared/animation.directive";
+import {DirectiveSkills} from "./components/shared/animations";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SkillsComponent } from './components/skills/skills.component';
     InitialComponent,
     AboutMeComponent,
     ProjectsComponent,
-    SkillsComponent
+    SkillsComponent,
+    AnimationDirective,
+    DirectiveSkills
   ],
   imports: [
     BrowserModule,

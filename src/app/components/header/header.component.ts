@@ -1,16 +1,29 @@
-import {Component, ElementRef} from '@angular/core';
-import {ScrollService} from "../shared/scroll.service";
+import { Component, OnInit } from '@angular/core';
+import { ScrollService } from "../shared/services/scroll.service";
+import { ThemeService } from "../shared/services/theme.service";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
-  constructor(private serviceScroll: ScrollService ){}
+  public currentTheme: string = 'dark';
 
-  public navigateTo(id: string) {
+  constructor(private serviceScroll: ScrollService, private serviceTheme: ThemeService ){
+  }
+
+  ngOnInit(): void {
+    this.defineTheme(this.currentTheme)
+  }
+
+  public navigateTo(id: string): void {
     this.serviceScroll.changeSectionId(id);
+  }
+
+  public defineTheme(currentTheme: string): void {
+      this.serviceTheme.changeTheme();
+      this.currentTheme = currentTheme;
   }
 }

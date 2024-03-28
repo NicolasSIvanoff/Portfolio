@@ -1,5 +1,5 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
-import {ScrollService} from "../shared/scroll.service";
+import { Component, ElementRef, OnInit } from '@angular/core';
+import { ScrollService } from "../shared/services/scroll.service";
 
 @Component({
   selector: 'app-about-me',

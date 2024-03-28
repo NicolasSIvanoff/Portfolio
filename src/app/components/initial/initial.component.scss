@@ -1,6 +1,5 @@
 #container-initial {
-  //background: url(/assets/images/background-light.jpg);
-  background: url(/assets/images/background-dark.jpg);
+  background: var(--background-image);
   background-size: cover;
   position: relative;
   width: 100vw;
@@ -23,7 +22,7 @@
   width: 47vw;
   background-color: rgba(18, 18, 18, 0.39);
   animation: text-center 8s forwards;
-  animation-delay: 6.5s;
+  animation-delay: 5.3s;
 }
 
 @keyframes text-center {
@@ -43,22 +42,22 @@ p {
 
 .first-animation {
   width: 32ch;
-  animation: typing 2s steps(40), blinking 3s step-end alternate;
+  animation: typing 2s steps(40), blinking 2s step-end alternate;
   animation-fill-mode: forwards;
 }
 
 .second-animation {
   width: 0;
-  animation: typing 2s steps(40), blinking 3s step-end alternate;
+  animation: typing 2s steps(40), blinking 2s step-end alternate;
   animation-fill-mode: forwards;
   animation-delay: 3s;
 }
 
 .third-animation {
   width: 0;
-  animation: typing-third 2s steps(40), blinking 3s step-end alternate;
+  animation: typing-third 2s steps(40), blinking 2s step-end alternate;
   animation-fill-mode: forwards;
-  animation-delay: 6s;
+  animation-delay: 5s;
 }
 
 @keyframes typing {
@@ -199,7 +198,6 @@ a:hover {
 a:hover .name-web {
   display: block;
 }
-
 
 @keyframes new-format {
   to {
