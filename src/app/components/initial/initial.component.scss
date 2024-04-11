@@ -36,55 +36,54 @@ p {
 
 .first-animation {
   width: 32ch;
-  animation: typing 2s steps(40), blinking 2s step-end alternate;
+  animation: typing 2s steps(40);
   animation-fill-mode: forwards;
 }
 
 .second-animation {
   width: 0;
-  animation: typing 2s steps(40), blinking 2s step-end alternate;
+  animation: typing 2s steps(40);
   animation-fill-mode: forwards;
   animation-delay: 3s;
 }
 
 .third-animation {
   width: 0;
-  animation: typing-third 2s steps(40), blinking 2s step-end alternate;
+  animation: typing-third 2s steps(40);
   animation-fill-mode: forwards;
   animation-delay: 5s;
 }
 
 @keyframes typing {
-  from {
+  0% {
     width: 0;
     border-right: 4px solid white;
   }
-  to {
+  99% {
+    border-right: 4px solid white;
+    white-space: nowrap;
+  }
+  100% {
     width: 32ch;
-    border-right: transparent
+    white-space: normal;
+    border-right: transparent;
   }
 }
 
 @keyframes typing-third {
-  from {
-    width: 0;
-  }
-  to {
-    width: 45ch;
-  }
-}
-
-@keyframes blinking {
   0% {
+    width: 0;
     border-right: 4px solid white;
   }
-  50% {
+  90% {
+    width: 45ch;
+    white-space: nowrap;
     border-right: 4px solid white;
   }
   100% {
-    border-right: transparent;
+    width: 91%;
     white-space: normal;
-    width: auto;
+    border-right: transparent;
   }
 }
 
