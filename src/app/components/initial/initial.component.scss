@@ -60,11 +60,12 @@ p {
     border-right: 4px solid white;
   }
   99% {
+    width: 32ch;
     border-right: 4px solid white;
     white-space: nowrap;
   }
   100% {
-    width: 32ch;
+    width: 91%;
     white-space: normal;
     border-right: transparent;
   }
